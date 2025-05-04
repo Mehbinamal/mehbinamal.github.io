@@ -1,8 +1,8 @@
 
 import React, { useEffect, useState } from 'react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Code, Database, Tools } from 'lucide-react';
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,35 +32,26 @@ const Skills = () => {
   const skillCategories = [
     {
       name: "Frontend",
+      icon: <Code className="h-5 w-5 mr-2" />,
       skills: [
-        { name: "React" },
-        { name: "Vue.js" },
-        { name: "Angular" },
-        { name: "HTML5/CSS3" },
-        { name: "JavaScript/TypeScript" },
-        { name: "Responsive Design" },
+        "React", "Vue.js", "Angular", "HTML5/CSS3", 
+        "JavaScript", "TypeScript", "Responsive Design"
       ]
     },
     {
       name: "Backend",
+      icon: <Database className="h-5 w-5 mr-2" />,
       skills: [
-        { name: "Node.js" },
-        { name: "Python" },
-        { name: "Java" },
-        { name: "SQL" },
-        { name: "GraphQL" },
-        { name: "RESTful APIs" },
+        "Node.js", "Python", "Java", "SQL", 
+        "GraphQL", "RESTful APIs", "MongoDB"
       ]
     },
     {
-      name: "Tools",
+      name: "Tools & Technologies",
+      icon: <Tools className="h-5 w-5 mr-2" />,
       skills: [
-        { name: "Git" },
-        { name: "Docker" },
-        { name: "AWS" },
-        { name: "CI/CD" },
-        { name: "Webpack" },
-        { name: "Jest" },
+        "Git", "Docker", "AWS", "CI/CD", 
+        "Webpack", "Jest", "GitHub Actions"
       ]
     }
   ];
@@ -70,37 +61,41 @@ const Skills = () => {
       <div className="container mx-auto px-4" id="skills-section">
         <h2 className="section-heading">My Skills</h2>
         
-        <Tabs defaultValue={skillCategories[0].name} className="mb-8">
-          <TabsList className="w-full overflow-x-auto flex justify-start md:justify-center space-x-2 p-2">
-            {skillCategories.map(category => (
-              <TabsTrigger key={category.name} value={category.name} className="px-4 py-2">
-                {category.name}
-              </TabsTrigger>
-            ))}
-          </TabsList>
-          
-          {skillCategories.map(category => (
-            <TabsContent key={category.name} value={category.name}>
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                {category.skills.map((skill, index) => (
-                  <Card 
-                    key={index} 
-                    className={`border-none shadow-md transition-all duration-500 ${
-                      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+        <div className="space-y-8">
+          {skillCategories.map((category, idx) => (
+            <div 
+              key={category.name} 
+              className={`transition-all duration-700 ${
+                isVisible 
+                  ? 'opacity-100 translate-y-0' 
+                  : 'opacity-0 translate-y-8'
+              }`}
+              style={{ transitionDelay: `${idx * 200}ms` }}
+            >
+              <div className="flex items-center mb-4">
+                <div className="p-2 bg-primary/10 rounded-lg mr-2">
+                  {category.icon}
+                </div>
+                <h3 className="text-xl font-semibold">{category.name}</h3>
+              </div>
+              
+              <div className="flex flex-wrap gap-3">
+                {category.skills.map((skill, i) => (
+                  <Badge 
+                    key={i} 
+                    className={`text-base py-2 px-4 rounded-md transition-all duration-500 hover:scale-105 bg-background border border-primary/20 hover:bg-primary hover:text-white ${
+                      isVisible ? 'opacity-100' : 'opacity-0'
                     }`} 
-                    style={{ transitionDelay: `${index * 100}ms` }}
+                    style={{ transitionDelay: `${(idx * 200) + (i * 100)}ms` }}
+                    variant="outline"
                   >
-                    <CardContent className="p-4 flex items-center justify-center">
-                      <Badge variant="secondary" className="text-md py-2 px-4">
-                        {skill.name}
-                      </Badge>
-                    </CardContent>
-                  </Card>
+                    {skill}
+                  </Badge>
                 ))}
               </div>
-            </TabsContent>
+            </div>
           ))}
-        </Tabs>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
           <div className="bg-background rounded-lg p-6 shadow-md text-center">
