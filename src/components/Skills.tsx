@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Code, Database, Tools } from 'lucide-react';
+import { Code, Database, Wrench } from 'lucide-react';
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -48,7 +48,7 @@ const Skills = () => {
     },
     {
       name: "Tools & Technologies",
-      icon: <Tools className="h-5 w-5 mr-2" />,
+      icon: <Wrench className="h-5 w-5 mr-2" />,
       skills: [
         "Git", "Docker", "AWS", "CI/CD", 
         "Webpack", "Jest", "GitHub Actions"
