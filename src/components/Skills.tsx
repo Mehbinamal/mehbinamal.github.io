@@ -65,12 +65,12 @@ const Skills = () => {
           {skillCategories.map((category, idx) => (
             <div 
               key={category.name} 
-              className={`transition-all duration-700 ${
+              className={`transition-all duration-500 ${
                 isVisible 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-8'
               }`}
-              style={{ transitionDelay: `${idx * 200}ms` }}
+              style={{ transitionDelay: `${idx * 100}ms` }}
             >
               <div className="flex items-center mb-4">
                 <div className="p-2 bg-primary/10 rounded-lg mr-2">
@@ -83,10 +83,10 @@ const Skills = () => {
                 {category.skills.map((skill, i) => (
                   <Badge 
                     key={i} 
-                    className={`text-base py-2 px-4 rounded-md transition-all duration-500 hover:scale-105 bg-background border border-primary/20 hover:bg-primary hover:text-white ${
+                    className={`text-base py-2 px-4 rounded-md transition-all duration-300 hover:scale-105 bg-background border border-primary/20 hover:bg-primary hover:text-white ${
                       isVisible ? 'opacity-100' : 'opacity-0'
                     }`} 
-                    style={{ transitionDelay: `${(idx * 200) + (i * 100)}ms` }}
+                    style={{ transitionDelay: `${(idx * 100) + (i * 50)}ms` }}
                     variant="outline"
                   >
                     {skill}
@@ -97,7 +97,7 @@ const Skills = () => {
           ))}
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
           <div className="bg-background rounded-lg p-6 shadow-md text-center">
             <div className="text-3xl font-bold text-primary mb-2">50+</div>
             <div className="text-foreground/80">Projects Completed</div>
@@ -105,10 +105,6 @@ const Skills = () => {
           <div className="bg-background rounded-lg p-6 shadow-md text-center">
             <div className="text-3xl font-bold text-primary mb-2">10+</div>
             <div className="text-foreground/80">GitHub Repositories</div>
-          </div>
-          <div className="bg-background rounded-lg p-6 shadow-md text-center">
-            <div className="text-3xl font-bold text-primary mb-2">Student</div>
-            <div className="text-foreground/80">Currently Studying</div>
           </div>
         </div>
       </div>
