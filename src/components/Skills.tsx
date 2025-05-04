@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Badge } from '@/components/ui/badge';
 
 const Skills = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,34 +33,34 @@ const Skills = () => {
     {
       name: "Frontend",
       skills: [
-        { name: "React", level: 95 },
-        { name: "Vue.js", level: 85 },
-        { name: "Angular", level: 80 },
-        { name: "HTML5/CSS3", level: 90 },
-        { name: "JavaScript/TypeScript", level: 95 },
-        { name: "Responsive Design", level: 90 },
+        { name: "React" },
+        { name: "Vue.js" },
+        { name: "Angular" },
+        { name: "HTML5/CSS3" },
+        { name: "JavaScript/TypeScript" },
+        { name: "Responsive Design" },
       ]
     },
     {
       name: "Backend",
       skills: [
-        { name: "Node.js", level: 90 },
-        { name: "Python", level: 85 },
-        { name: "Java", level: 75 },
-        { name: "SQL", level: 80 },
-        { name: "GraphQL", level: 85 },
-        { name: "RESTful APIs", level: 90 },
+        { name: "Node.js" },
+        { name: "Python" },
+        { name: "Java" },
+        { name: "SQL" },
+        { name: "GraphQL" },
+        { name: "RESTful APIs" },
       ]
     },
     {
       name: "Tools",
       skills: [
-        { name: "Git", level: 95 },
-        { name: "Docker", level: 85 },
-        { name: "AWS", level: 80 },
-        { name: "CI/CD", level: 85 },
-        { name: "Webpack", level: 80 },
-        { name: "Jest", level: 85 },
+        { name: "Git" },
+        { name: "Docker" },
+        { name: "AWS" },
+        { name: "CI/CD" },
+        { name: "Webpack" },
+        { name: "Jest" },
       ]
     }
   ];
@@ -80,25 +81,19 @@ const Skills = () => {
           
           {skillCategories.map(category => (
             <TabsContent key={category.name} value={category.name}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
                 {category.skills.map((skill, index) => (
-                  <Card key={index} className="overflow-hidden border-none shadow-md">
-                    <CardHeader className="pb-2">
-                      <div className="flex justify-between items-center">
-                        <CardTitle className="text-lg">{skill.name}</CardTitle>
-                        <span className="text-sm font-semibold">{skill.level}%</span>
-                      </div>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="skill-progress">
-                        <div 
-                          className="transition-all duration-1000 ease-out" 
-                          style={{ 
-                            width: isVisible ? `${skill.level}%` : '0%',
-                            transitionDelay: `${index * 100}ms` 
-                          }}
-                        ></div>
-                      </div>
+                  <Card 
+                    key={index} 
+                    className={`border-none shadow-md transition-all duration-500 ${
+                      isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                    }`} 
+                    style={{ transitionDelay: `${index * 100}ms` }}
+                  >
+                    <CardContent className="p-4 flex items-center justify-center">
+                      <Badge variant="secondary" className="text-md py-2 px-4">
+                        {skill.name}
+                      </Badge>
                     </CardContent>
                   </Card>
                 ))}
@@ -107,22 +102,18 @@ const Skills = () => {
           ))}
         </Tabs>
         
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-12">
           <div className="bg-background rounded-lg p-6 shadow-md text-center">
             <div className="text-3xl font-bold text-primary mb-2">50+</div>
             <div className="text-foreground/80">Projects Completed</div>
-          </div>
-          <div className="bg-background rounded-lg p-6 shadow-md text-center">
-            <div className="text-3xl font-bold text-primary mb-2">30+</div>
-            <div className="text-foreground/80">Happy Clients</div>
           </div>
           <div className="bg-background rounded-lg p-6 shadow-md text-center">
             <div className="text-3xl font-bold text-primary mb-2">10+</div>
             <div className="text-foreground/80">GitHub Repositories</div>
           </div>
           <div className="bg-background rounded-lg p-6 shadow-md text-center">
-            <div className="text-3xl font-bold text-primary mb-2">5+</div>
-            <div className="text-foreground/80">Years Experience</div>
+            <div className="text-3xl font-bold text-primary mb-2">Student</div>
+            <div className="text-foreground/80">Currently Studying</div>
           </div>
         </div>
       </div>
