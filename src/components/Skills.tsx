@@ -34,24 +34,24 @@ const Skills = () => {
       name: "Frontend",
       icon: <Code className="h-5 w-5 mr-2" />,
       skills: [
-        "React", "Vue.js", "Angular", "HTML5/CSS3", 
-        "JavaScript", "TypeScript", "Responsive Design"
+        "HTML/CSS", "JavaScript", "React", "Bootstrap", 
+        "Tailwind CSS", "UI/UX Design", "Responsive Design"
       ]
     },
     {
       name: "Backend",
       icon: <Database className="h-5 w-5 mr-2" />,
       skills: [
-        "Node.js", "Python", "Java", "SQL", 
-        "GraphQL", "RESTful APIs", "MongoDB"
+        "Python", "Node.js", "Express", "MongoDB", 
+        "RESTful APIs", "SQL Basics", "Firebase"
       ]
     },
     {
       name: "Tools & Technologies",
       icon: <Wrench className="h-5 w-5 mr-2" />,
       skills: [
-        "Git", "Docker", "AWS", "CI/CD", 
-        "Webpack", "Jest", "GitHub Actions"
+        "Git", "GitHub", "VS Code", "Figma", 
+        "Terminal", "NPM", "Agile/Scrum"
       ]
     }
   ];
@@ -65,7 +65,7 @@ const Skills = () => {
           {skillCategories.map((category, idx) => (
             <div 
               key={category.name} 
-              className={`transition-all duration-500 ${
+              className={`transition-all duration-300 ${
                 isVisible 
                   ? 'opacity-100 translate-y-0' 
                   : 'opacity-0 translate-y-8'
@@ -83,10 +83,10 @@ const Skills = () => {
                 {category.skills.map((skill, i) => (
                   <Badge 
                     key={i} 
-                    className={`text-base py-2 px-4 rounded-md transition-all duration-300 hover:scale-105 bg-background border border-primary/20 hover:bg-primary hover:text-white ${
+                    className={`text-base py-2 px-4 rounded-md transition-all duration-200 hover:scale-105 bg-background border border-primary/20 hover:bg-primary hover:text-white ${
                       isVisible ? 'opacity-100' : 'opacity-0'
                     }`} 
-                    style={{ transitionDelay: `${(idx * 100) + (i * 50)}ms` }}
+                    style={{ transitionDelay: `${(idx * 50) + (i * 30)}ms` }}
                     variant="outline"
                   >
                     {skill}
@@ -99,11 +99,11 @@ const Skills = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-12">
           <div className="bg-background rounded-lg p-6 shadow-md text-center">
-            <div className="text-3xl font-bold text-primary mb-2">50+</div>
-            <div className="text-foreground/80">Projects Completed</div>
+            <div className="text-3xl font-bold text-primary mb-2">5+</div>
+            <div className="text-foreground/80">Course Projects</div>
           </div>
           <div className="bg-background rounded-lg p-6 shadow-md text-center">
-            <div className="text-3xl font-bold text-primary mb-2">10+</div>
+            <div className="text-3xl font-bold text-primary mb-2">8+</div>
             <div className="text-foreground/80">GitHub Repositories</div>
           </div>
         </div>

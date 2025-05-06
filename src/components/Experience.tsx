@@ -6,32 +6,32 @@ import { Badge } from '@/components/ui/badge';
 const Experience = () => {
   const experiences = [
     {
-      title: "Senior Full Stack Developer",
+      title: "Software Development Intern",
       company: "Tech Innovations Inc.",
-      period: "2021 - Present",
-      description: "Lead a team of developers in creating scalable web applications. Architected and implemented microservices using Node.js and React. Improved system performance by 40% through code optimization.",
-      technologies: ["React", "Node.js", "AWS", "MongoDB"]
+      period: "Summer 2024",
+      description: "Assisted in developing web applications with React and Node.js. Collaborated with the team to implement new features and fix bugs. Participated in daily stand-up meetings and gained hands-on experience with industry tools.",
+      technologies: ["React", "Node.js", "Git", "Agile"]
     },
     {
-      title: "Full Stack Developer",
-      company: "Digital Solutions Ltd.",
-      period: "2018 - 2021",
-      description: "Developed full-stack web applications with responsive designs. Collaborated with UX/UI designers to implement user-friendly interfaces. Integrated third-party APIs and payment gateways.",
-      technologies: ["Vue.js", "Express", "PostgreSQL", "Docker"]
+      title: "Student Researcher",
+      company: "University Computer Science Department",
+      period: "2023 - Present",
+      description: "Working on a research project focusing on machine learning applications for natural language processing. Implementing algorithms and collecting data for analysis.",
+      technologies: ["Python", "TensorFlow", "Data Analysis", "Research"]
     },
     {
-      title: "Frontend Developer",
-      company: "WebCraft Agency",
-      period: "2016 - 2018",
-      description: "Created interactive and responsive user interfaces. Implemented pixel-perfect designs from Figma mockups. Optimized web performance and improved SEO scores.",
-      technologies: ["HTML/CSS", "JavaScript", "Sass", "Webpack"]
+      title: "President, Coding Club",
+      company: "University Student Organization",
+      period: "2022 - Present",
+      description: "Leading weekly coding workshops and hackathon events for 50+ members. Organizing guest speaker sessions with industry professionals. Managing club budget and coordinating with other student organizations.",
+      technologies: ["Leadership", "Event Planning", "Teaching", "Community Building"]
     }
   ];
 
   return (
     <section id="experience">
       <div className="container mx-auto px-4">
-        <h2 className="section-heading">Professional Experience</h2>
+        <h2 className="section-heading">Experience & Leadership</h2>
         
         <div className="space-y-8">
           {experiences.map((exp, index) => (

@@ -16,25 +16,25 @@ const Hero = () => {
               John Doe
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-0 animate-fade-in animate-delay-200">
-              Full-Stack Developer
+              Computer Science Student
             </p>
             <p className="text-lg mb-8 text-foreground/80 max-w-lg opacity-0 animate-fade-in animate-delay-300">
-              I create elegant and efficient solutions for complex problems. With expertise in modern web technologies, 
-              I bring ideas to life through clean, maintainable code and intuitive user experiences.
+              I'm currently pursuing my degree in Computer Science with a focus on web development and artificial intelligence. 
+              I'm passionate about creating elegant solutions and constantly learning new technologies.
             </p>
             <div className="flex flex-wrap gap-4 opacity-0 animate-fade-in animate-delay-400">
               <Button asChild size="lg">
                 <a href="#contact">Get in touch</a>
               </Button>
               <Button asChild variant="outline" size="lg">
-                <a href="#projects">View my work</a>
+                <a href="#projects">View my projects</a>
               </Button>
             </div>
           </div>
           <div className="order-1 md:order-2 flex justify-center">
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl opacity-0 animate-fade-in">
               <img 
-                src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1287&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1780&auto=format&fit=crop" 
                 alt="Profile" 
                 className="w-full h-full object-cover"
               />

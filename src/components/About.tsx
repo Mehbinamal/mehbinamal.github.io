@@ -11,19 +11,19 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div>
             <p className="text-lg mb-4">
-              I am a passionate Full-Stack Developer with a strong foundation in both front-end and back-end technologies. 
-              My journey in software development started 5 years ago, and I've been building robust, scalable applications ever since.
+              I am a passionate Computer Science student with a strong interest in web development and machine learning. 
+              Currently pursuing my degree, I'm constantly looking for opportunities to apply my knowledge and skills to real-world problems.
             </p>
             
             <p className="text-lg mb-4">
-              I specialize in creating responsive web applications with modern JavaScript frameworks like React and Vue, 
-              paired with powerful back-end technologies such as Node.js and Python. I'm committed to writing clean, 
-              maintainable code that solves real-world problems.
+              I enjoy building responsive web applications using modern JavaScript frameworks like React and Vue, 
+              and I'm developing my skills in back-end technologies like Node.js and Python. My goal is to create
+              clean, efficient code that solves meaningful problems.
             </p>
             
             <p className="text-lg mb-6">
-              When I'm not coding, you can find me exploring new technologies, contributing to open-source projects, 
-              or hiking in the great outdoors. I believe in continuous learning and pushing the boundaries of what's possible in tech.
+              When I'm not coding or studying, you can find me participating in hackathons, contributing to open-source projects, 
+              or leading workshops at our university's coding club. I'm passionate about technology education and helping others learn to code.
             </p>
             
             <div className="flex flex-wrap gap-4">
@@ -34,7 +34,7 @@ const About = () => {
                     <polyline points="7 10 12 15 17 10"></polyline>
                     <line x1="12" y1="15" x2="12" y2="3"></line>
                   </svg>
-                  Download CV
+                  Download Resume
                 </a>
               </Button>
             </div>
@@ -42,23 +42,23 @@ const About = () => {
           
           <div className="grid grid-cols-2 gap-6">
             <div className="bg-background rounded-lg p-6 shadow-md">
-              <h3 className="text-2xl font-bold text-primary mb-2">5+</h3>
-              <p className="text-foreground/70">Years of Experience</p>
-            </div>
-            
-            <div className="bg-background rounded-lg p-6 shadow-md">
-              <h3 className="text-2xl font-bold text-primary mb-2">50+</h3>
-              <p className="text-foreground/70">Projects Completed</p>
-            </div>
-            
-            <div className="bg-background rounded-lg p-6 shadow-md">
-              <h3 className="text-2xl font-bold text-primary mb-2">30+</h3>
-              <p className="text-foreground/70">Happy Clients</p>
+              <h3 className="text-2xl font-bold text-primary mb-2">3.8</h3>
+              <p className="text-foreground/70">GPA</p>
             </div>
             
             <div className="bg-background rounded-lg p-6 shadow-md">
               <h3 className="text-2xl font-bold text-primary mb-2">10+</h3>
-              <p className="text-foreground/70">Awards Received</p>
+              <p className="text-foreground/70">Projects Completed</p>
+            </div>
+            
+            <div className="bg-background rounded-lg p-6 shadow-md">
+              <h3 className="text-2xl font-bold text-primary mb-2">5+</h3>
+              <p className="text-foreground/70">Hackathons</p>
+            </div>
+            
+            <div className="bg-background rounded-lg p-6 shadow-md">
+              <h3 className="text-2xl font-bold text-primary mb-2">2+</h3>
+              <p className="text-foreground/70">Student Orgs Led</p>
             </div>
           </div>
         </div>
