@@ -26,7 +26,7 @@ const Contact = () => {
     setIsSubmitting(true);
   
     try {
-      const response = await fetch("https://formsubmit.co/mehbinamal6@gmail.com", {
+      const response = await fetch("https://formsubmit.co/8642331360a92e283baf30f11129a1c5", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
