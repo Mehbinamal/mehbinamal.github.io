@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Button } from '@/components/ui/button';
+import profileImg from './assets/profile.jpg';
 
 const Hero = () => {
   return (
@@ -13,14 +14,14 @@ const Hero = () => {
               Hello, I'm
             </h2>
             <h1 className="text-4xl md:text-6xl font-bold mb-4 opacity-0 animate-fade-in animate-delay-100">
-              John Doe
+              Amal Mehabin P
             </h1>
             <p className="text-xl md:text-2xl mb-8 opacity-0 animate-fade-in animate-delay-200">
               Computer Science Student
             </p>
             <p className="text-lg mb-8 text-foreground/80 max-w-lg opacity-0 animate-fade-in animate-delay-300">
-              I'm currently pursuing my degree in Computer Science with a focus on web development and artificial intelligence. 
-              I'm passionate about creating elegant solutions and constantly learning new technologies.
+              I'm a Computer Science student focused on web development, AI, and machine learning. 
+              I enjoy the vibe of coding and love building clean, smart solutions while exploring new tech.
             </p>
             <div className="flex flex-wrap gap-4 opacity-0 animate-fade-in animate-delay-400">
               <Button asChild size="lg">
@@ -34,7 +35,7 @@ const Hero = () => {
           <div className="order-1 md:order-2 flex justify-center">
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white shadow-xl opacity-0 animate-fade-in">
               <img 
-                src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=1780&auto=format&fit=crop" 
+                src={profileImg} 
                 alt="Profile" 
                 className="w-full h-full object-cover"
               />

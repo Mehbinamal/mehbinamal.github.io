@@ -6,26 +6,20 @@ import { Badge } from '@/components/ui/badge';
 const Education = () => {
   const education = [
     {
-      degree: "Master of Science in Computer Science",
-      institution: "Stanford University",
-      period: "2014 - 2016",
-      description: "Specialized in Artificial Intelligence and Machine Learning. Completed thesis on Neural Networks for Natural Language Processing.",
-      achievements: ["GPA: 3.9/4.0", "Dean's List", "Research Assistant"]
+      degree: "Higher Secondary (Biology Science)",
+      institution: "GHSS KUNNAKKAVU",
+      period: "2020 - 2021",
+      description: "Studied Biology Science with a strong focus on subjects like Physics, Chemistry, and Biology. Developed analytical and problem-solving skills.",
+      achievements: ["98% Marks", "Participated in various quiz competitions"]
     },
     {
-      degree: "Bachelor of Science in Software Engineering",
-      institution: "Massachusetts Institute of Technology",
-      period: "2010 - 2014",
-      description: "Focused on software development methodologies and programming paradigms. Participated in numerous hackathons and coding competitions.",
-      achievements: ["GPA: 3.8/4.0", "Scholarship Recipient", "First Place in Coding Competition"]
-    },
-    {
-      degree: "Advanced Certification in Cloud Computing",
-      institution: "AWS Academy",
-      period: "2018",
-      description: "Comprehensive training in AWS services and cloud architecture. Hands-on experience with deploying scalable applications on AWS.",
-      achievements: ["AWS Certified Solutions Architect", "AWS Certified Developer"]
+      degree: "Master of Science in Computer Science (Integrated MSc)",
+      institution: "Cochin University of Science and Technology",
+      period: "2023 - Present",
+      description: "Currently pursuing a 5-year Integrated MSc in Computer Science with a specialization in AI and Data Science. Gaining expertise in machine learning, data analysis, and web development.",
+      achievements: ["Current CGPA: 9.08", "Active Member of TinkerHub DCS"]
     }
+    
   ];
 
   return (

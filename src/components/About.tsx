@@ -11,19 +11,16 @@ const About = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div>
             <p className="text-lg mb-4">
-              I am a passionate Computer Science student with a strong interest in web development and machine learning. 
-              Currently pursuing my degree, I'm constantly looking for opportunities to apply my knowledge and skills to real-world problems.
+              I'm Amal Mehabin P, a second-year student at Cochin University of Science and Technology, pursuing a 5-year Integrated MSc in Computer Science with a specialization in AI and Data Science.
+              I'm mainly a back-end developer, passionate about building efficient and scalable systems.
             </p>
-            
+
             <p className="text-lg mb-4">
-              I enjoy building responsive web applications using modern JavaScript frameworks like React and Vue, 
-              and I'm developing my skills in back-end technologies like Node.js and Python. My goal is to create
-              clean, efficient code that solves meaningful problems.
+              I work with technologies like Node.js, Python, and databases like PostgreSQL and MongoDB to power web applications. I also enjoy working with APIs, authentication, and deploying back-end services using cloud platforms and tools like Supabase and Docker.
             </p>
-            
+
             <p className="text-lg mb-6">
-              When I'm not coding or studying, you can find me participating in hackathons, contributing to open-source projects, 
-              or leading workshops at our university's coding club. I'm passionate about technology education and helping others learn to code.
+              Outside of coding, I actively participate in hackathons, contribute to open-source projects, and lead community events as the Co-Lead of TinkerHub DCS. I’m driven by a love for learning and helping others grow through tech.
             </p>
             
             <div className="flex flex-wrap gap-4">
@@ -42,17 +39,17 @@ const About = () => {
           
           <div className="grid grid-cols-2 gap-6">
             <div className="bg-background rounded-lg p-6 shadow-md">
-              <h3 className="text-2xl font-bold text-primary mb-2">3.8</h3>
-              <p className="text-foreground/70">GPA</p>
-            </div>
-            
-            <div className="bg-background rounded-lg p-6 shadow-md">
-              <h3 className="text-2xl font-bold text-primary mb-2">10+</h3>
-              <p className="text-foreground/70">Projects Completed</p>
+              <h3 className="text-2xl font-bold text-primary mb-2">9.08</h3>
+              <p className="text-foreground/70">CGPA</p>
             </div>
             
             <div className="bg-background rounded-lg p-6 shadow-md">
               <h3 className="text-2xl font-bold text-primary mb-2">5+</h3>
+              <p className="text-foreground/70">Projects Completed</p>
+            </div>
+            
+            <div className="bg-background rounded-lg p-6 shadow-md">
+              <h3 className="text-2xl font-bold text-primary mb-2">3+</h3>
               <p className="text-foreground/70">Hackathons</p>
             </div>
             

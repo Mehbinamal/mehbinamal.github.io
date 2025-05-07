@@ -4,66 +4,45 @@ import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/componen
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import  icu  from './assets/icu.jpg'
+import lifeLink from './assets/lifelink.jpg'
+import highFive from './assets/highfive.png'
 
 const Projects = () => {
-  const categories = ["All", "Web Development", "Mobile Apps", "UI/UX Design"];
+  const categories = ["All", "Web Development", "Mobile Apps", "Hackathon"];
   const [activeCategory, setActiveCategory] = useState("All");
 
   const projects = [
     {
-      title: "E-commerce Platform",
+      title: "ICU Patient Monitoring Platform",
+      category: "Hackathon",
+      image: icu , 
+      description: "A real-time monitoring system that allows authorized family members to view ICU patient vitals remotely, enhancing transparency and reducing anxiety.",
+      technologies: ["Django", "CSS", "HTML"],
+      liveLink: "/404",
+      githubLink: "https://github.com/Thejuskuku/SINOVA"
+    },
+    {
+      title: "Lifelink Blood Donation System",
       category: "Web Development",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1287&auto=format&fit=crop",
-      description: "A full-featured e-commerce platform with product management, shopping cart, and secure checkout.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-      liveLink: "#",
-      githubLink: "#"
+      image: lifeLink,
+      description: "A platform to connect blood donors and recipients efficiently. Includes donor registration, request tracking, and automated alerts for urgent needs.",
+      technologies: ["React", "Node", "Tailwind CSS", "Mongo DB" ,"Express"],
+      liveLink: "https://life-link-blood-donation-system.vercel.app",
+      githubLink: "https://github.com/Mehbinamal/Life-Link-Blood-Donation-System"
     },
     {
-      title: "Health & Fitness App",
-      category: "Mobile Apps",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1287&auto=format&fit=crop",
-      description: "A mobile application for tracking fitness goals, nutrition, and providing personalized workout plans.",
-      technologies: ["React Native", "Firebase", "GraphQL"],
-      liveLink: "#",
-      githubLink: "#"
-    },
-    {
-      title: "Financial Dashboard",
-      category: "UI/UX Design",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?q=80&w=1287&auto=format&fit=crop",
-      description: "An intuitive dashboard for financial data visualization with real-time updates and interactive charts.",
-      technologies: ["Figma", "Adobe XD", "Sketch"],
-      liveLink: "#",
-      githubLink: "#"
-    },
-    {
-      title: "Social Media Analytics",
-      category: "Web Development",
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=1287&auto=format&fit=crop",
-      description: "A comprehensive analytics platform for tracking social media performance across multiple platforms.",
-      technologies: ["Vue.js", "Django", "D3.js", "PostgreSQL"],
-      liveLink: "#",
-      githubLink: "#"
-    },
-    {
-      title: "Task Management System",
-      category: "Web Development",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?q=80&w=1287&auto=format&fit=crop",
-      description: "A collaborative task management system with real-time updates and team collaboration features.",
-      technologies: ["Angular", "Firebase", "Material UI"],
-      liveLink: "#",
-      githubLink: "#"
-    },
-    {
-      title: "Travel Planning App",
-      category: "Mobile Apps",
-      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1287&auto=format&fit=crop",
-      description: "A mobile app for planning trips, booking accommodations, and discovering local attractions.",
-      technologies: ["Flutter", "Google Maps API", "Firebase"],
-      liveLink: "#",
-      githubLink: "#"
-    },
+      title: "Virtual High-Five Generator",
+      category: "Hackathon",
+      image: highFive, 
+      description: "A light-hearted web app where users can give virtual high-fives by clicking on avatars, accompanied by sound effects.",
+      technologies: ["HTML", "CSS", "JavaScript"],
+      liveLink: "https://boisterous-tarsier-2548a3.netlify.app/",
+      githubLink: "https://github.com/Mehbinamal/Virtual-High-Five-Generator"
+    }
+    
+  
+    
   ];
 
   const filteredProjects = activeCategory === "All"

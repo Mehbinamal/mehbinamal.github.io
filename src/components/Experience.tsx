@@ -6,26 +6,26 @@ import { Badge } from '@/components/ui/badge';
 const Experience = () => {
   const experiences = [
     {
-      title: "Software Development Intern",
-      company: "Tech Innovations Inc.",
-      period: "Summer 2024",
-      description: "Assisted in developing web applications with React and Node.js. Collaborated with the team to implement new features and fix bugs. Participated in daily stand-up meetings and gained hands-on experience with industry tools.",
-      technologies: ["React", "Node.js", "Git", "Agile"]
+      title: "NSS Leader",
+      company: "GHSS KUNNAKKAVU (Plus Two)",
+      period: "2020 - 2022",
+      description: "Led social outreach initiatives as part of the National Service Scheme. Coordinated campus clean-up drives, awareness campaigns, and community service programs, fostering leadership and team collaboration.",
+      technologies: ["Leadership", "Community Outreach", "Team Management"]
     },
     {
-      title: "Student Researcher",
-      company: "University Computer Science Department",
-      period: "2023 - Present",
-      description: "Working on a research project focusing on machine learning applications for natural language processing. Implementing algorithms and collecting data for analysis.",
-      technologies: ["Python", "TensorFlow", "Data Analysis", "Research"]
+      title: "Co-Lead, TinkerHub DCS",
+      company: "Cochin University of Science and Technology",
+      period: "2024 - Present",
+      description: "Organizing technical workshops, hackathons, and mentorship sessions to foster peer learning. Building partnerships and engaging the tech community to promote coding and innovation.",
+      technologies: ["Event Planning", "Community Engagement", "Leadership", "Tech Education"]
     },
     {
-      title: "President, Coding Club",
-      company: "University Student Organization",
-      period: "2022 - Present",
-      description: "Leading weekly coding workshops and hackathon events for 50+ members. Organizing guest speaker sessions with industry professionals. Managing club budget and coordinating with other student organizations.",
-      technologies: ["Leadership", "Event Planning", "Teaching", "Community Building"]
-    }
+      title: "Organizer, Make-A-Ton 7.0",
+      company: "IEDC CUSAT,CITTIC CUSAT",
+      period: "2024",
+      description: "Worked in the sponsorship and curation teams of Kerala’s Largest Hackathon. Managed outreach to potential sponsors and coordinated with mentors and judges to ensure a successful hackathon experience.",
+      technologies: ["Sponsorship Management", "Event Coordination", "Team Collaboration", "Networking"]
+    }    
   ];
 
   return (

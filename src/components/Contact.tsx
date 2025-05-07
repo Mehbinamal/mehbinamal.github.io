@@ -21,24 +21,41 @@ const Contact = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    setTimeout(() => {
+  
+    try {
+      const response = await fetch("https://formsubmit.co/mehbinamal6@gmail.com", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+  
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "Thank you for your message. I'll get back to you soon.",
+        });
+        setFormData({ name: "", email: "", subject: "", message: "" });
+      } else {
+        toast({
+          title: "Error",
+          description: "Failed to send message. Try again later.",
+        });
+      }
+    } catch (error) {
+      console.error(error);
       toast({
-        title: "Message sent!",
-        description: "Thank you for your message. I'll get back to you soon.",
+        title: "Network Error",
+        description: "Please check your connection.",
       });
-      setFormData({
-        name: '',
-        email: '',
-        subject: '',
-        message: ''
-      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
 
   return (
@@ -64,21 +81,10 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Email</div>
-                  <a href="mailto:contact@example.com" className="text-foreground hover:text-primary">contact@example.com</a>
+                  <a href="mailto:contact@example.com" className="text-foreground hover:text-primary">mehbinamal6@gmail.com</a>
                 </div>
               </div>
               
-              <div className="flex items-center">
-                <div className="bg-primary/10 p-3 rounded-lg mr-4">
-                  <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                  </svg>
-                </div>
-                <div>
-                  <div className="text-sm text-muted-foreground">Phone</div>
-                  <a href="tel:+1234567890" className="text-foreground hover:text-primary">+1 (234) 567-890</a>
-                </div>
-              </div>
               
               <div className="flex items-center">
                 <div className="bg-primary/10 p-3 rounded-lg mr-4">
@@ -89,7 +95,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <div className="text-sm text-muted-foreground">Location</div>
-                  <span className="text-foreground">San Francisco, CA</span>
+                  <span className="text-foreground">Malappuram, Kerala, India</span>
                 </div>
               </div>
             </div>
