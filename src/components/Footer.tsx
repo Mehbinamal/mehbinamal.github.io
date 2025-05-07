@@ -65,7 +65,7 @@ const Footer = () => {
                 </svg>
               </a>
             </div>
-            <p className="text-foreground/80">Email: contact@example.com</p>
+            <p className="text-foreground/80">Email: mehbinamal6@gmail.com</p>
 
           </div>
         </div>
