@@ -7,6 +7,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import  icu  from './assets/icu.jpg'
 import lifeLink from './assets/lifelink.jpg'
 import highFive from './assets/highfive.png'
+import attendancePal from './assets/AttendancePal.png'
 
 const Projects = () => {
   const categories = ["All", "Web Development", "Mobile Apps", "Hackathon"];
@@ -39,6 +40,15 @@ const Projects = () => {
       technologies: ["HTML", "CSS", "JavaScript"],
       liveLink: "https://boisterous-tarsier-2548a3.netlify.app/",
       githubLink: "https://github.com/Mehbinamal/Virtual-High-Five-Generator"
+    },
+    {
+      title: "My Attendance Pal",
+      category: "Web Development",
+      image: attendancePal, 
+      description: "A user-friendly attendance management system that lets students and faculty easily track and manage attendance data with Supabase integration.",
+      technologies: ["React", "Node", "Tailwind CSS", "Supabse" ],
+      liveLink: "https://my-attendance-pal.vercel.app/",
+      githubLink: "https://github.com/Mehbinamal/myAttendancePal"
     }
     
   
