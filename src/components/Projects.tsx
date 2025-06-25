@@ -8,6 +8,9 @@ import  icu  from './assets/icu.jpg'
 import lifeLink from './assets/lifelink.jpg'
 import highFive from './assets/highfive.png'
 import attendancePal from './assets/AttendancePal.png'
+import studyBuddy from './assets/studybuddy.png'
+import taskFlow from './assets/TaskFlow.png'
+import blogApp from './assets/blogApp.png'
 
 const Projects = () => {
   const categories = ["All", "Web Development", "Mobile Apps", "Hackathon"];
@@ -50,8 +53,33 @@ const Projects = () => {
       liveLink: "https://my-attendance-pal.vercel.app/",
       githubLink: "https://github.com/Mehbinamal/myAttendancePal"
     }
-    
-  
+    ,{
+      title: "Task Flow",
+      category: "Web Development",
+      image: taskFlow,
+      description: "A task management system that allows users to create, assign, and track tasks.",
+      technologies: ["React", "Node", "Tailwind CSS", "Firebase" ],
+      liveLink: "#",
+      githubLink: "#"
+    },
+    {
+      title:"Study Buddy",
+      category: "Hackathon",
+      image: studyBuddy,
+      description: "A Connectivity Platform for students to connect with each other and share their knowledge.",
+      technologies: ["React", "Node", "Tailwind CSS", "Firebase" ],
+      liveLink: "#",
+      githubLink: "#"
+    },
+    {
+      title: "Blog App",
+      category: "Mobile Apps",
+      image: blogApp,
+      description: "A blog app that allows users to create, read, update, and delete blogs.",
+      technologies: ["Flutter", "Dart", "Django" ],
+      liveLink: "#",
+      githubLink: "#"
+    }
     
   ];
 
