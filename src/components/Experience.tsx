@@ -25,7 +25,15 @@ const Experience = () => {
       period: "2024",
       description: "Worked in the sponsorship and curation teams of Kerala’s Largest Hackathon. Managed outreach to potential sponsors and coordinated with mentors and judges to ensure a successful hackathon experience.",
       technologies: ["Sponsorship Management", "Event Coordination", "Team Collaboration", "Networking"]
-    }    
+    },
+    {
+      title: "Intern",
+      company: "LeaLabs Technologies",
+      period: "MAY 2025 - JULY 2025",
+      description: "Contributed to the development of advanced Retrieval-Augmented Generation (RAG) systems using the AutoGen library. Integrated Large Language Models (LLMs) for automated data workflows and built supporting applications using Django and Flutter.",
+      technologies: ["AutoGen", "LLMs", "RAG Systems", "Django", "Flutter", "Python"]
+    }
+    
   ];
 
   return (

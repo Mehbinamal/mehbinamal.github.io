@@ -103,7 +103,7 @@ const Skills = () => {
             <div className="text-foreground/80">Course Projects</div>
           </div>
           <div className="bg-background rounded-lg p-6 shadow-md text-center">
-            <div className="text-3xl font-bold text-primary mb-2">19+</div>
+            <div className="text-3xl font-bold text-primary mb-2">30+</div>
             <div className="text-foreground/80">GitHub Repositories</div>
           </div>
         </div>

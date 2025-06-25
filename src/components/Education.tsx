@@ -17,7 +17,7 @@ const Education = () => {
       institution: "Cochin University of Science and Technology",
       period: "2023 - Present",
       description: "Currently pursuing a 5-year Integrated MSc in Computer Science with a specialization in AI and Data Science. Gaining expertise in machine learning, data analysis, and web development.",
-      achievements: ["Current CGPA: 9.08", "Active Member of TinkerHub DCS"]
+      achievements: ["Current CGPA: 9.13", "Active Member of TinkerHub DCS"]
     }
     
   ];

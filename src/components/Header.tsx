@@ -59,7 +59,7 @@ const Header = () => {
               </a>
             ))}
             <Button asChild variant="outline" className="ml-4">
-              <a href="#cv">Download CV</a>
+              <a href="https://drive.google.com/file/d/17UfmpHcHnE5cykSQfwmo8Ckwmkz7jGwr/view?usp=sharing">Download CV</a>
             </Button>
           </nav>
           
