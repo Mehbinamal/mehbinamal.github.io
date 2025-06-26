@@ -1,9 +1,9 @@
-
 import React, { useState } from 'react';
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { useNavigate } from 'react-router-dom';
 import  icu  from './assets/icu.jpg'
 import lifeLink from './assets/lifelink.jpg'
 import highFive from './assets/highfive.png'
@@ -15,6 +15,7 @@ import blogApp from './assets/blogApp.png'
 const Projects = () => {
   const categories = ["All", "Web Development", "Mobile Apps", "Hackathon"];
   const [activeCategory, setActiveCategory] = useState("All");
+  const navigate = useNavigate();
 
   const projects = [
     {
@@ -117,9 +118,15 @@ const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-primary/50 opacity-0 group-hover:opacity-100 flex items-center justify-center transition-opacity duration-300">
                   <div className="flex space-x-4">
-                    <Button asChild size="sm" variant="secondary">
-                      <a href={project.liveLink} target="_blank" rel="noopener noreferrer">Live Demo</a>
-                    </Button>
+                    {project.liveLink === '/in-production' ? (
+                      <Button size="sm" variant="secondary" onClick={() => navigate('/in-production')}>
+                        Live Demo
+                      </Button>
+                    ) : (
+                      <Button asChild size="sm" variant="secondary">
+                        <a href={project.liveLink} target="_blank" rel="noopener noreferrer">Live Demo</a>
+                      </Button>
+                    )}
                     <Button asChild size="sm" variant="outline">
                       <a href={project.githubLink} target="_blank" rel="noopener noreferrer">Source Code</a>
                     </Button>
