@@ -1,5 +1,5 @@
-
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -13,6 +13,20 @@ import Footer from '@/components/Footer';
 import ScrollToTop from '@/components/ScrollToTop';
 
 const Index = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    if (location.state && location.state.scrollToContact) {
+      const contactSection = document.getElementById('contact');
+      if (contactSection) {
+        contactSection.scrollIntoView({ behavior: 'smooth' });
+      }
+      // Clear the state so it doesn't scroll again on refresh
+      navigate(location.pathname, { replace: true, state: {} });
+    }
+  }, [location, navigate]);
+
   return (
     <div className="min-h-screen">
       <Header />

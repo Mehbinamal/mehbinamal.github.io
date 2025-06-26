@@ -59,8 +59,8 @@ const Projects = () => {
       image: taskFlow,
       description: "A task management system that allows users to create, assign, and track tasks.",
       technologies: ["React", "Node", "Tailwind CSS", "Firebase" ],
-      liveLink: "#",
-      githubLink: "#"
+      liveLink: "/in-production",
+      githubLink: "https://github.com/Mehbinamal/Task-Flow"
     },
     {
       title:"Study Buddy",
@@ -68,8 +68,8 @@ const Projects = () => {
       image: studyBuddy,
       description: "A Connectivity Platform for students to connect with each other and share their knowledge.",
       technologies: ["React", "Node", "Tailwind CSS", "Firebase" ],
-      liveLink: "#",
-      githubLink: "#"
+      liveLink: "/in-production",
+      githubLink: "/in-production"
     },
     {
       title: "Blog App",
@@ -77,8 +77,8 @@ const Projects = () => {
       image: blogApp,
       description: "A blog app that allows users to create, read, update, and delete blogs.",
       technologies: ["Flutter", "Dart", "Django" ],
-      liveLink: "#",
-      githubLink: "#"
+      liveLink: "/in-production",
+      githubLink: "https://github.com/Mehbinamal/BLOG-APPLICATION"
     }
     
   ];
