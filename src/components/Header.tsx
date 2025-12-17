@@ -1,10 +1,12 @@
 
 import React, { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
+import { Menu, X, Download } from 'lucide-react';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('home');
   
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +15,18 @@ const Header = () => {
       } else {
         setScrolled(false);
       }
+
+      // Update active section based on scroll position
+      const sections = ['home', 'about', 'experience', 'education', 'projects', 'skills', 'contact'];
+      const current = sections.find(section => {
+        const element = document.getElementById(section);
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          return rect.top <= 100 && rect.bottom >= 100;
+        }
+        return false;
+      });
+      if (current) setActiveSection(current);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -31,93 +45,134 @@ const Header = () => {
     { name: 'Contact', href: '#contact' }
   ];
 
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault();
+    const element = document.querySelector(href);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setMobileMenuOpen(false);
+    }
+  };
+
   return (
     <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-background/95 shadow-md backdrop-blur-sm' : 'bg-transparent'
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
+        scrolled 
+          ? 'glass-strong shadow-lg border-b border-primary/10' 
+          : 'bg-transparent'
       }`}
+      role="banner"
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between py-4">
-          <a href="#home" className="text-2xl font-bold font-display">
-            Portfolio
+          <a 
+            href="#home" 
+            className="text-2xl font-bold font-display text-primary transition-all duration-300 hover:scale-105"
+            aria-label="Home"
+            onClick={(e) => handleNavClick(e, '#home')}
+          >
+            AM
           </a>
           
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navLinks.map((link) => (
-              <a
-                key={link.name}
-                href={link.href}
-                className="text-foreground/80 hover:text-primary transition-colors font-medium"
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
-                }}
+          <nav className="hidden md:flex items-center gap-2" role="navigation" aria-label="Main navigation">
+            {navLinks.map((link) => {
+              const isActive = activeSection === link.href.substring(1);
+              return (
+                <a
+                  key={link.name}
+                  href={link.href}
+                  className={`relative px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
+                    isActive
+                      ? 'text-primary bg-primary/10'
+                      : 'text-foreground/70 hover:text-primary hover:bg-primary/5'
+                  }`}
+                  onClick={(e) => handleNavClick(e, link.href)}
+                  aria-current={isActive ? 'page' : undefined}
+                >
+                  {link.name}
+                  {isActive && (
+                    <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 rounded-full bg-primary"></span>
+                  )}
+                </a>
+              );
+            })}
+            <Button 
+              asChild 
+              variant="outline" 
+              className="ml-4 glass hover:bg-primary/10 border-primary/20"
+            >
+              <a 
+                href="https://drive.google.com/file/d/17UfmpHcHnE5cykSQfwmo8Ckwmkz7jGwr/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2"
               >
-                {link.name}
+                <Download className="w-4 h-4" />
+                <span className="hidden lg:inline">CV</span>
               </a>
-            ))}
-            <Button asChild variant="outline" className="ml-4">
-              <a href="https://drive.google.com/file/d/17UfmpHcHnE5cykSQfwmo8Ckwmkz7jGwr/view?usp=sharing">Download CV</a>
             </Button>
           </nav>
           
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden text-foreground"
+            className="md:hidden p-2 rounded-lg glass hover:bg-primary/10 transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label="Toggle menu"
+            aria-expanded={mobileMenuOpen}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              className="w-6 h-6"
-            >
-              {mobileMenuOpen ? (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              ) : (
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M4 6h16M4 12h16M4 18h16"
-                />
-              )}
-            </svg>
+            {mobileMenuOpen ? (
+              <X className="w-6 h-6 text-foreground" />
+            ) : (
+              <Menu className="w-6 h-6 text-foreground" />
+            )}
           </button>
         </div>
         
         {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <div className="md:hidden py-4 bg-background/95 backdrop-blur-sm">
-            <nav className="flex flex-col space-y-4">
-              {navLinks.map((link) => (
-                <a
-                  key={link.name}
-                  href={link.href}
-                  className="text-foreground/80 hover:text-primary transition-colors px-4 py-2"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    document.querySelector(link.href)?.scrollIntoView({ behavior: 'smooth' });
-                    setMobileMenuOpen(false);
-                  }}
+        <div 
+          className={`md:hidden overflow-hidden transition-all duration-300 ${
+            mobileMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <nav className="py-4 glass-strong rounded-lg mt-2 mb-2" role="navigation" aria-label="Mobile navigation">
+            <div className="flex flex-col space-y-2">
+              {navLinks.map((link) => {
+                const isActive = activeSection === link.href.substring(1);
+                return (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    className={`px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
+                      isActive
+                        ? 'text-primary bg-primary/10'
+                        : 'text-foreground/70 hover:text-primary hover:bg-primary/5'
+                    }`}
+                    onClick={(e) => handleNavClick(e, link.href)}
+                    aria-current={isActive ? 'page' : undefined}
+                  >
+                    {link.name}
+                  </a>
+                );
+              })}
+              <Button 
+                asChild 
+                variant="outline" 
+                className="mx-4 mt-2 glass border-primary/20"
+              >
+                <a 
+                  href="https://drive.google.com/file/d/17UfmpHcHnE5cykSQfwmo8Ckwmkz7jGwr/view?usp=sharing"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2"
                 >
-                  {link.name}
+                  <Download className="w-4 h-4" />
+                  Download CV
                 </a>
-              ))}
-              <Button asChild variant="outline" className="mx-4">
-                <a href="#cv">Download CV</a>
               </Button>
-            </nav>
-          </div>
-        )}
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
   );
