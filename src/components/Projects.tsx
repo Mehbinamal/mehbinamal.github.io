@@ -8,10 +8,11 @@ import  icu  from './assets/icu.jpg'
 import lifeLink from './assets/lifelink.jpg'
 import highFive from './assets/highfive.png'
 import attendancePal from './assets/AttendancePal.png'
-import studyBuddy from './assets/studybuddy.png'
+import studyBuddy from './assets/StudyBuddy.png'
 import taskFlow from './assets/TaskFlow.png'
-import blogApp from './assets/blogApp.png'
+import blogApp from './assets/BlogApp.png'
 import bookMyBarber from './assets/BookMyBarber.png'
+import projectPlaceholder from './assets/project-placeholder.svg'
 
 const Projects = () => {
   const categories = ["All", "Web Development", "Mobile Apps", "Hackathon"];
@@ -73,6 +74,42 @@ const Projects = () => {
       image: studyBuddy,
       description: "A Connectivity Platform for students to connect with each other and share their knowledge.",
       technologies: ["React", "Node", "Tailwind CSS", "Firebase" ],
+      liveLink: "/in-production",
+      githubLink: "/in-production"
+    },
+    {
+      title: "Fake News Detector",
+      category: "Web Development",
+      image: projectPlaceholder,
+      description: "Fake news detection using an ensemble of Logistic Regression, Naive Bayes, SGD Classifier, and SVM with TF-IDF features, plus a FastAPI interface for real-time predictions with confidence scores.",
+      technologies: ["Python", "FastAPI", "scikit-learn", "TF-IDF"],
+      liveLink: "/in-production",
+      githubLink: "/in-production"
+    },
+    {
+      title: "Hey Delulu - CUSAT Valentine's Confessions",
+      category: "Web Development",
+      image: projectPlaceholder,
+      description: "A Valentine's Day confessions website for CUSAT students to share feelings anonymously, with shareable cards and a polished UI.",
+      technologies: ["Vite", "React", "TypeScript", "Tailwind CSS"],
+      liveLink: "/in-production",
+      githubLink: "/in-production"
+    },
+    {
+      title: "CivicLens 🏛️",
+      category: "Hackathon",
+      image: projectPlaceholder,
+      description: "A civic-tech platform for reporting and managing local issues using AI-powered image analysis, with an interactive map and an admin dashboard.",
+      technologies: ["React", "Leaflet", "Firebase", "Tailwind CSS"],
+      liveLink: "/in-production",
+      githubLink: "/in-production"
+    },
+    {
+      title: "CodeTales - GitHub Repository Storyteller",
+      category: "Hackathon",
+      image: projectPlaceholder,
+      description: "A web app that tells the story behind a public GitHub repository by analyzing commit history, contributors, and evolution over time (React frontend + Express API).",
+      technologies: ["React", "TypeScript", "Vite", "Express.js"],
       liveLink: "/in-production",
       githubLink: "/in-production"
     },

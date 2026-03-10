@@ -14,11 +14,11 @@ const Education = () => {
       achievements: ["98% Marks", "Participated in various quiz competitions"]
     },
     {
-      degree: "Master of Science in Computer Science (Integrated MSc)",
+      degree: "5 year Integrated MSc In Computer Science (AI & DS)",
       institution: "Cochin University of Science and Technology",
-      period: "2023 - Present",
+      period: "2023 - 2028",
       description: "Currently pursuing a 5-year Integrated MSc in Computer Science with a specialization in AI and Data Science. Gaining expertise in machine learning, data analysis, and web development.",
-      achievements: ["Current CGPA: 9.13", "Active Member of TinkerHub DCS"]
+      achievements: ["Current CGPA: 9.15", "Active Member of TinkerHub DCS"]
     }
   ];
 

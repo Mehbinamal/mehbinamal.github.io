@@ -5,9 +5,9 @@ import { Download, Code, Database, Users, Award } from 'lucide-react';
 
 const About = () => {
   const stats = [
-    { value: '9.13', label: 'CGPA', icon: Award, color: 'from-primary to-secondary' },
-    { value: '7+', label: 'Projects', icon: Code, color: 'from-secondary to-primary' },
-    { value: '3+', label: 'Hackathons', icon: Users, color: 'from-primary to-secondary' },
+    { value: '9.15', label: 'CGPA', icon: Award, color: 'from-primary to-secondary' },
+    { value: '10+', label: 'Projects', icon: Code, color: 'from-secondary to-primary' },
+    { value: '5+', label: 'Hackathons', icon: Users, color: 'from-primary to-secondary' },
     { value: '2+', label: 'Leadership Roles', icon: Database, color: 'from-secondary to-primary' }
   ];
 
